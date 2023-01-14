@@ -19,8 +19,8 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 
 // Create a base layer that holds both maps.
 let baseMaps = {
-    Day_Navigation : day,
-    Night_Navigation : night
+    Day : day,
+    Night : night
   };
 
 // Create the map object with center, zoom level, and default layer.
@@ -40,7 +40,7 @@ let torontoData = "https://raw.githubusercontent.com/AmberMiller15/Mapping_Earth
 let myStyle = {
     color: "#ffffa1",
     weight: 2
-};
+}
 
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data){
@@ -50,7 +50,7 @@ d3.json(torontoData).then(function(data){
         style: myStyle,
         onEachFeature: function(feature, layer) {
             console.log(layer);
-            layer.bindPopup("<h2>" + "Airlines : " + feature.properties.airline + "</h2><hr><h3>" + "Destination : "+ feature.properties.dst +  "</h3>");
+            layer.bindPopup("<h2> Airlines : " + feature.properties.airline + "</h2><hr><h3> Destination : "+ feature.properties.dst +  "</h3>");
          }
     }).addTo(map);
 });
