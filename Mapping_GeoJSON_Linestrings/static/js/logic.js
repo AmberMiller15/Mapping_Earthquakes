@@ -3,7 +3,7 @@ console.log("working");
 
 // Adding Multiple Maps
 // We create the street view tile layer that will be the background of our map.
-let day = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/day-navigation-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let day = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-day-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     accessToken: API_KEY
@@ -11,7 +11,7 @@ let day = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/day-navigation-v1
 
 
 // We create the dark view tile layer that will be an option for our map.
-let night = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/night-navigation-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let night = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-night-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     accessToken: API_KEY
